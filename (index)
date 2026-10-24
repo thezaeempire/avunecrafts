@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preload" as="image" href="/assets/hero-bouquet-sRHsAVdS.jpg"/>
+        <link rel="stylesheet" href="/assets/styles-B9YSa4lK.css" data-precedence="default"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" data-precedence="default"/>
+        <title>Avunè — Handmade with Love, Crafted to Last</title>
+        <meta name="author" content="Avunè"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Avunè"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="description" content="Discover Avunè: luxury handmade pipe cleaner bouquets, roses, tulips, keychains and bespoke gifts made with love."/>
+        <meta property="og:title" content="Avunè — Handmade with Love, Crafted to Last"/>
+        <meta property="og:description" content="Luxury handmade pipe cleaner flowers, bouquets, and bespoke gifts."/>
+        <meta property="og:url" content="/"/>
+        <link rel="modulepreload" href="/assets/index-Bf_yG1gX.js"/>
+        <link rel="modulepreload" href="/assets/useStore-BIgwMX88.js"/>
+        <link rel="modulepreload" href="/assets/cart-CQxn7ou7.js"/>
+        <link rel="modulepreload" href="/assets/matchContext-Ba5k90rA.js"/>
+        <link rel="modulepreload" href="/assets/root-DLTE-HSj.js"/>
+        <link rel="modulepreload" href="/assets/routes-Ca-ZspaQ.js"/>
+        <link rel="modulepreload" href="/assets/Layout-BkI1xHW3.js"/>
+        <link rel="modulepreload" href="/assets/sparkles-B2iTkPON.js"/>
+        <link rel="modulepreload" href="/assets/hero-bouquet-D-ecqePd.js"/>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+        <link rel="canonical" href="/"/>
+        <style>
+            #lovable-badge {
+                --badge-bg: #1b1b1b;
+                --badge-text: #c5c1b9;
+                --badge-text-hover: #dcdad5;
+                --badge-radius: 6px;
+                --badge-padding: 8px;
+                --badge-gap: 6px;
+                --badge-shadow: 0 0 0 1px rgba(0, 0, 0, 0.88), 0 1px 0 0 rgba(0, 0, 0, 0.04), 0 2px 2px -1px rgba(0, 0, 0, 0.08), 0 4px 4px -2px rgba(0, 0, 0, 0.08), 0 8px 8px -4px rgba(0, 0, 0, 0.08), 0 16px 16px -8px rgba(0, 0, 0, 0.08);
+                --badge-transition-duration: 0.2s;
+                --badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
+                --focus-color: #575ECF;
+                --focus-offset: 2px;
+                --focus-width: 2px;
+                position: fixed;
+                bottom: 12px;
+                right: 12px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                z-index: 1000000;
+                background-color: var(--badge-bg) !important;
+                color: var(--badge-text) !important;
+                border-radius: var(--badge-radius);
+                box-shadow: var(--badge-shadow) !important;
+                font-size: 12px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                font-weight: 400 !important;
+                text-transform: none !important;
+                font-feature-settings: normal !important;
+                transform: translateZ(0);
+                will-change: transform, opacity;
+                transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
+            }
+
+            #lovable-badge.closing {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            #lovable-badge-cta {
+                display: flex;
+                align-items: baseline;
+                gap: var(--badge-gap);
+                box-sizing: border-box;
+                padding: 4px var(--badge-padding) 0;
+                height: 100%;
+                color: inherit;
+                text-decoration: none;
+                white-space: nowrap;
+                border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+                transition: background-color var(--badge-transition-duration) ease, color var(--badge-transition-duration) ease, transform 0.1s ease;
+            }
+
+            #lovable-badge-cta:hover {
+                background: rgba(255, 255, 255, 0.04);
+                color: var(--badge-text-hover);
+            }
+
+            #lovable-badge-cta:active {
+                transform: scale(0.98);
+            }
+
+            #lovable-badge-cta:focus {
+                outline: none;
+            }
+
+            #lovable-badge-cta:focus-visible {
+                outline: var(--focus-width) solid var(--focus-color);
+                outline-offset: var(--focus-offset);
+                z-index: 1;
+            }
+
+            #lovable-badge-text {
+                line-height: 1;
+            }
+
+            /* The wordmark baseline sits at y=12 of the 16px logo; an empty 12px box
+	   makes that the flex baseline so the text aligns to it on any system font. */
+            #lovable-badge-logo {
+                position: relative;
+                display: block;
+                width: 52px;
+                height: 12px;
+            }
+
+            #lovable-badge-logo svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            #lovable-badge-divider {
+                width: 1px;
+                height: 24px;
+                background-color: rgba(255, 255, 255, 0.04);
+                flex-shrink: 0;
+            }
+
+            #lovable-badge-close {
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
+                flex-shrink: 0;
+                transition: background-color var(--badge-transition-duration) ease, transform 0.1s ease;
+            }
+
+            #lovable-badge-close:hover {
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            #lovable-badge-close:active {
+                transform: scale(0.92);
+            }
+
+            #lovable-badge-close:focus {
+                outline: none;
+            }
+
+            #lovable-badge-close:focus-visible {
+                outline: var(--focus-width) solid var(--focus-color);
+                outline-offset: calc(var(--focus-offset) * -1);
+                z-index: 1;
+            }
+
+            #lovable-badge-close svg path {
+                fill: var(--badge-text);
+                transition: fill var(--badge-transition-duration) ease;
+            }
+
+            #lovable-badge-close:hover svg path {
+                fill: var(--badge-text-hover);
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                #lovable-badge, #lovable-badge-cta, #lovable-badge-close, #lovable-badge-close svg path {
+                    transition: none;
+                }
+
+                #lovable-badge-cta:active, #lovable-badge-close:active {
+                    transform: none;
+                }
+            }
+
+            @media (prefers-contrast: high) {
+                #lovable-badge {
+                    --badge-bg: #000;
+                    --badge-text: #fff;
+                    --badge-text-hover: #fff;
+                    border: 2px solid currentColor;
+                }
+
+                #lovable-badge-cta:focus-visible, #lovable-badge-close:focus-visible {
+                    outline-width: 3px;
+                }
+            }
+        </style>
+        <script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+        <script defer src="/__l5e/events.b21a279f52bb8621.js" data-artifact-kind="dwl_content_hash" data-artifact-id="aca2e175e5b46db2c2e05ac62dac2bb47fd36df6e546112503ec8c84c5e0c2e8" data-commit-sha="2e8b7cf91e1b2bc32b70524028b91de62cc61eed" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF80MTdya3FtcGpwOWI5djg0OWtrbmpocTZlciIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiJhY2EyZTE3NWU1YjQ2ZGIyYzJlMDVhYzYyZGFjMmJiNDdmZDM2ZGY2ZTU0NjExMjUwM2VjOGM4NGM1ZTBjMmU4IiwiY29tbWl0X3NoYSI6IjJlOGI3Y2Y5MWUxYjJiYzMyYjcwNTI0MDI4YjkxZGU2MmNjNjFlZWQiLCJleHAiOjE3OTU0MDUwNjR9.vuZsYaHmatB8RrMppWXP_IN6rqz4R3sWqnRFtOI2uJI"></script>
+        <meta name="twitter:title" content="Avunè — Handmade with Love, Crafted to Last">
+        <meta name="twitter:description" content="Luxury handmade pipe cleaner flowers, bouquets, and bespoke gifts.">
+        <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f22dd0ce-33f8-4bb1-9355-f87e8330ba40/id-preview-84bd2126--5c882f5a-f397-434b-abff-2d35bd0e952e.lovable.app-1785987112849.png">
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f22dd0ce-33f8-4bb1-9355-f87e8330ba40/id-preview-84bd2126--5c882f5a-f397-434b-abff-2d35bd0e952e.lovable.app-1785987112849.png">
+    </head>
+    <body>
+        <!--$-->
+        <div class="fixed inset-0 z-[100] grid place-items-center bg-background transition-opacity duration-500 opacity-100">
+            <div class="flex flex-col items-center gap-6">
+                <svg viewBox="0 0 100 100" class="h-24 w-24 animate-bloom">
+                    <g>
+                        <ellipse cx="50" cy="28" rx="10" ry="20" fill="var(--primary)" opacity="0.9" transform="rotate(0 50 50)"></ellipse>
+                        <ellipse cx="50" cy="28" rx="10" ry="20" fill="var(--primary)" opacity="0.9" transform="rotate(60 50 50)"></ellipse>
+                        <ellipse cx="50" cy="28" rx="10" ry="20" fill="var(--primary)" opacity="0.9" transform="rotate(120 50 50)"></ellipse>
+                        <ellipse cx="50" cy="28" rx="10" ry="20" fill="var(--primary)" opacity="0.9" transform="rotate(180 50 50)"></ellipse>
+                        <ellipse cx="50" cy="28" rx="10" ry="20" fill="var(--primary)" opacity="0.9" transform="rotate(240 50 50)"></ellipse>
+                        <ellipse cx="50" cy="28" rx="10" ry="20" fill="var(--primary)" opacity="0.9" transform="rotate(300 50 50)"></ellipse>
+                        <circle cx="50" cy="50" r="7" fill="var(--rose-gold)"></circle>
+                    </g>
+                </svg>
+                <div class="text-display text-3xl tracking-tight">
+                    Avun<span class="italic text-accent">è</span>
+                </div>
+            </div>
+        </div>
+        <div class="min-h-screen flex flex-col">
+            <header class="fixed inset-x-0 top-0 z-50 transition-all duration-500 py-4">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 transition-all duration-500 ">
+                    <div class="flex items-center justify-between gap-4 py-3">
+                        <a class="flex items-center gap-2 group active" href="/" data-status="active" aria-current="page">
+                            <span class="text-display text-2xl tracking-tight">
+                                Avun<span class="italic text-accent">è</span>
+                            </span>
+                        </a>
+                        <nav class="hidden md:flex items-center gap-8">
+                            <a class="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full text-foreground after:w-full" href="/" data-status="active" aria-current="page">Home</a>
+                            <a href="/products" class="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full">Boutique</a>
+                            <a href="/gallery" class="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full">Gallery</a>
+                            <a href="/custom" class="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full">Custom</a>
+                            <a href="/about" class="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full">Atelier</a>
+                            <a href="/contact" class="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-accent after:transition-all hover:after:w-full">Contact</a>
+                        </nav>
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Search" class="p-2 rounded-full hover:bg-muted transition-colors hidden sm:inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search h-4 w-4" aria-hidden="true">
+                                    <path d="m21 21-4.34-4.34"></path>
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                </svg>
+                            </button>
+                            <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-muted transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon h-4 w-4" aria-hidden="true">
+                                    <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+                                </svg>
+                            </button>
+                            <button aria-label="Wishlist" class="p-2 rounded-full hover:bg-muted transition-colors hidden sm:inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart h-4 w-4" aria-hidden="true">
+                                    <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                                </svg>
+                            </button>
+                            <a aria-label="Account" href="/auth" class="p-2 rounded-full hover:bg-muted transition-colors hidden sm:inline-flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-4 w-4" aria-hidden="true">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </a>
+                            <a aria-label="Cart" href="/cart" class="relative p-2 rounded-full hover:bg-muted transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag h-4 w-4" aria-hidden="true">
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    <path d="M3.103 6.034h17.794"></path>
+                                    <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
+                                </svg>
+                            </a>
+                            <button aria-label="Menu" class="md:hidden p-2 rounded-full hover:bg-muted transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-4 w-4" aria-hidden="true">
+                                    <path d="M4 5h16"></path>
+                                    <path d="M4 12h16"></path>
+                                    <path d="M4 19h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 pt-24">
+                <section class="relative overflow-hidden">
+                    <div class="absolute inset-0 gradient-blush"></div>
+                    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+                        <svg viewBox="0 0 40 40" style="position:absolute;top:10%;left:6%;width:28px;height:28px;animation-delay:0s" class="animate-float-slow opacity-70">
+                            <g>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(0 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(72 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(144 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(216 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(288 20 20)"></ellipse>
+                                <circle cx="20" cy="20" r="3" fill="var(--rose-gold)"></circle>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 40 40" style="position:absolute;top:22%;left:88%;width:22px;height:22px;animation-delay:1s" class="animate-float-med opacity-70">
+                            <g>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(0 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(72 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(144 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(216 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(288 20 20)"></ellipse>
+                                <circle cx="20" cy="20" r="3" fill="var(--rose-gold)"></circle>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 40 40" style="position:absolute;top:60%;left:4%;width:34px;height:34px;animation-delay:2s" class="animate-float-med opacity-70">
+                            <g>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(0 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(72 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(144 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(216 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(288 20 20)"></ellipse>
+                                <circle cx="20" cy="20" r="3" fill="var(--rose-gold)"></circle>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 40 40" style="position:absolute;top:72%;left:92%;width:26px;height:26px;animation-delay:0.5s" class="animate-float-slow opacity-70">
+                            <g>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(0 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(72 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(144 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(216 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(288 20 20)"></ellipse>
+                                <circle cx="20" cy="20" r="3" fill="var(--rose-gold)"></circle>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 40 40" style="position:absolute;top:40%;left:50%;width:18px;height:18px;animation-delay:1.5s" class="animate-float-slow opacity-70">
+                            <g>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(0 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(72 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(144 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(216 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(288 20 20)"></ellipse>
+                                <circle cx="20" cy="20" r="3" fill="var(--rose-gold)"></circle>
+                            </g>
+                        </svg>
+                        <svg viewBox="0 0 40 40" style="position:absolute;top:84%;left:40%;width:24px;height:24px;animation-delay:2.5s" class="animate-float-med opacity-70">
+                            <g>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(0 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(72 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(144 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(216 20 20)"></ellipse>
+                                <ellipse cx="20" cy="10" rx="5" ry="9" fill="var(--primary)" opacity="0.85" transform="rotate(288 20 20)"></ellipse>
+                                <circle cx="20" cy="20" r="3" fill="var(--rose-gold)"></circle>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="relative mx-auto max-w-7xl px-6 pt-10 pb-24 md:pt-20 md:pb-32 grid gap-12 md:grid-cols-2 items-center">
+                        <div class="space-y-8 animate-reveal">
+                            <div class="eyebrow flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles h-3 w-3" aria-hidden="true">
+                                    <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+                                    <path d="M20 2v4"></path>
+                                    <path d="M22 4h-4"></path>
+                                    <circle cx="4" cy="20" r="2"></circle>
+                                </svg>
+                                Maison Avunè · Est. Handmade
+                            </div>
+                            <h1 class="text-display text-5xl sm:text-6xl md:text-7xl leading-[0.95]">
+                                Handmade with <em class="italic text-accent">love</em>
+                                ,<br/>
+                                crafted to <span class="shimmer-text">last</span>
+                                .
+                            </h1>
+                            <p class="max-w-md text-base text-muted-foreground leading-relaxed">A boutique of everlasting blooms, sculpted petal by petal from the softest chenille. Never wilting. Always yours.</p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="/products" class="btn-primary">
+                                    Shop Now 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true">
+                                        <path d="M5 12h14"></path>
+                                        <path d="m12 5 7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                                <a href="/custom" class="btn-ghost">Customize Your Gift</a>
+                            </div>
+                            <div class="flex items-center gap-6 pt-4 text-xs text-muted-foreground">
+                                <div class="flex items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <span class="ml-2">4.9 · 2,400+ reviews</span>
+                                </div>
+                                <span class="hidden sm:inline">Worldwide shipping</span>
+                            </div>
+                        </div>
+                        <div class="relative animate-reveal" style="animation-delay:0.2s">
+                            <div class="absolute -inset-6 rounded-[3rem] bg-primary/40 blur-3xl"></div>
+                            <div class="relative rounded-[2.5rem] overflow-hidden shadow-soft">
+                                <img src="/assets/hero-bouquet-sRHsAVdS.jpg" alt="Handmade pipe cleaner bouquet by Avunè" width="1600" height="1600" class="w-full h-auto object-cover"/>
+                            </div>
+                            <div class="absolute -bottom-6 -left-6 glass rounded-2xl px-5 py-4 shadow-glass">
+                                <div class="eyebrow">The Signature</div>
+                                <div class="text-display text-xl">Blush Bouquet</div>
+                                <div class="text-xs text-muted-foreground mt-1">Made to order · 5 days</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="border-y border-border/60 bg-cream/40 overflow-hidden">
+                    <div class="flex gap-16 py-5 whitespace-nowrap animate-[shimmer_30s_linear_infinite] text-display text-2xl">
+                        <span class="opacity-70">
+                            Handmade in Atelier
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Never Wilting
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Bespoke Blooms
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Shipped Worldwide
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Sustainable Craft
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Handmade in Atelier
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Never Wilting
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                        <span class="opacity-70">
+                            Bespoke Blooms
+                            <!-- -->
+                            <span class="text-accent mx-4">✿</span>
+                        </span>
+                    </div>
+                </section>
+                <section class="mx-auto max-w-7xl px-6 py-24">
+                    <div class="flex items-end justify-between gap-6 mb-12">
+                        <div>
+                            <div class="eyebrow mb-3">The Collections</div>
+                            <h2 class="text-display text-4xl sm:text-5xl">Curated by hand.</h2>
+                        </div>
+                        <a href="/products" class="hidden sm:inline-flex items-center gap-2 text-sm hover:text-accent transition-colors">
+                            View all 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                        <a href="/products" class="group relative overflow-hidden rounded-3xl bg-card border border-border/60 hover:border-accent/40 transition-all duration-500 sm:col-span-2 lg:col-span-2 lg:row-span-2">
+                            <div class="aspect-[3/4] lg:aspect-[4/5] overflow-hidden">
+                                <img src="/assets/product-bouquet-D6j9LvV3.jpg" alt="Bouquets" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <div class="text-[10px] tracking-[0.28em] uppercase opacity-80">The Signature</div>
+                                <div class="text-display text-2xl mt-1">Bouquets</div>
+                            </div>
+                        </a>
+                        <a href="/products" class="group relative overflow-hidden rounded-3xl bg-card border border-border/60 hover:border-accent/40 transition-all duration-500 ">
+                            <div class="aspect-[3/4]  overflow-hidden">
+                                <img src="/assets/product-rose-CRWXBCKN.jpg" alt="Single Flowers" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <div class="text-[10px] tracking-[0.28em] uppercase opacity-80">Everlasting</div>
+                                <div class="text-display text-2xl mt-1">Single Flowers</div>
+                            </div>
+                        </a>
+                        <a href="/products" class="group relative overflow-hidden rounded-3xl bg-card border border-border/60 hover:border-accent/40 transition-all duration-500 ">
+                            <div class="aspect-[3/4]  overflow-hidden">
+                                <img src="/assets/product-tulips-vN8R33zW.jpg" alt="Tulips" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <div class="text-[10px] tracking-[0.28em] uppercase opacity-80">Spring Édition</div>
+                                <div class="text-display text-2xl mt-1">Tulips</div>
+                            </div>
+                        </a>
+                        <a href="/products" class="group relative overflow-hidden rounded-3xl bg-card border border-border/60 hover:border-accent/40 transition-all duration-500 ">
+                            <div class="aspect-[3/4]  overflow-hidden">
+                                <img src="/assets/product-keychain-QyHap03g.jpg" alt="Keychains" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <div class="text-[10px] tracking-[0.28em] uppercase opacity-80">Petite</div>
+                                <div class="text-display text-2xl mt-1">Keychains</div>
+                            </div>
+                        </a>
+                        <a href="/products" class="group relative overflow-hidden rounded-3xl bg-card border border-border/60 hover:border-accent/40 transition-all duration-500 ">
+                            <div class="aspect-[3/4]  overflow-hidden">
+                                <img src="/assets/product-giftset-DwEzpFZG.jpg" alt="Gift Sets" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <div class="text-[10px] tracking-[0.28em] uppercase opacity-80">Coffret</div>
+                                <div class="text-display text-2xl mt-1">Gift Sets</div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="bg-secondary/50">
+                    <div class="mx-auto max-w-7xl px-6 py-24">
+                        <div class="text-center mb-14">
+                            <div class="eyebrow mb-3">Featured</div>
+                            <h2 class="text-display text-4xl sm:text-5xl">Bestsellers of the season</h2>
+                        </div>
+                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                            <div class="group">
+                                <div class="relative overflow-hidden rounded-3xl bg-cream aspect-[3/4]">
+                                    <img src="/assets/product-rose-CRWXBCKN.jpg" alt="Rose Éternelle" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                                    <span class="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] tracking-widest uppercase">Bestseller</span>
+                                    <button class="absolute inset-x-4 bottom-4 btn-primary opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Quick view</button>
+                                </div>
+                                <div class="flex items-baseline justify-between mt-4">
+                                    <div class="text-display text-lg">Rose Éternelle</div>
+                                    <div class="text-sm text-muted-foreground">₹299</div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="relative overflow-hidden rounded-3xl bg-cream aspect-[3/4]">
+                                    <img src="/assets/product-tulips-vN8R33zW.jpg" alt="Tulipe Bouquet" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                                    <span class="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] tracking-widest uppercase">New</span>
+                                    <button class="absolute inset-x-4 bottom-4 btn-primary opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Quick view</button>
+                                </div>
+                                <div class="flex items-baseline justify-between mt-4">
+                                    <div class="text-display text-lg">Tulipe Bouquet</div>
+                                    <div class="text-sm text-muted-foreground">₹1,099</div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="relative overflow-hidden rounded-3xl bg-cream aspect-[3/4]">
+                                    <img src="/assets/product-keychain-QyHap03g.jpg" alt="Petite Keychain" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                                    <span class="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] tracking-widest uppercase">Gift</span>
+                                    <button class="absolute inset-x-4 bottom-4 btn-primary opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Quick view</button>
+                                </div>
+                                <div class="flex items-baseline justify-between mt-4">
+                                    <div class="text-display text-lg">Petite Keychain</div>
+                                    <div class="text-sm text-muted-foreground">₹299</div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="relative overflow-hidden rounded-3xl bg-cream aspect-[3/4]">
+                                    <img src="/assets/product-giftset-DwEzpFZG.jpg" alt="Coffret Blossom" loading="lazy" class="h-full w-full object-cover transition-transform duration-[1.2s] group-hover:scale-105"/>
+                                    <span class="absolute top-4 left-4 glass rounded-full px-3 py-1 text-[10px] tracking-widest uppercase">Limited</span>
+                                    <button class="absolute inset-x-4 bottom-4 btn-primary opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Quick view</button>
+                                </div>
+                                <div class="flex items-baseline justify-between mt-4">
+                                    <div class="text-display text-lg">Coffret Blossom</div>
+                                    <div class="text-sm text-muted-foreground">₹1,999</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mx-auto max-w-7xl px-6 py-24 grid gap-16 md:grid-cols-2 items-center">
+                    <div class="relative order-2 md:order-1">
+                        <div class="absolute -inset-6 bg-primary/30 blur-3xl rounded-full"></div>
+                        <img src="/assets/about-craft-DZegMtbS.jpg" alt="Avunè artisan crafting" loading="lazy" class="relative rounded-[2rem] w-full object-cover aspect-[4/5] shadow-soft"/>
+                    </div>
+                    <div class="order-1 md:order-2 space-y-6">
+                        <div class="eyebrow">The Atelier</div>
+                        <h2 class="text-display text-4xl sm:text-5xl leading-tight">
+                            Each bloom, a quiet <em class="italic text-accent">devotion</em>
+                            .
+                        </h2>
+                        <p class="text-muted-foreground leading-relaxed">Avunè began in a small sunlit corner, with a single pink rose that refused to wilt. Today, every piece is still shaped by hand — one petal, one twist, one memory at a time.</p>
+                        <a href="/about" class="btn-ghost">
+                            Our story 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <section class="relative overflow-hidden">
+                    <div class="absolute inset-0 gradient-blush opacity-60"></div>
+                    <div class="relative mx-auto max-w-7xl px-6 py-24">
+                        <div class="text-center mb-14">
+                            <div class="eyebrow mb-3">Kind Words</div>
+                            <h2 class="text-display text-4xl sm:text-5xl">Loved by our maison</h2>
+                        </div>
+                        <div class="grid gap-6 md:grid-cols-3">
+                            <div class="glass rounded-3xl p-8 shadow-glass">
+                                <div class="flex gap-1 mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-display text-xl leading-snug mb-6">&quot;<!-- -->Absolutely exquisite. My bouquet still looks freshly made a year later — it &#x27;s a piece of art.<!-- -->&quot;</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-accent grid place-items-center text-primary-foreground text-sm font-medium">A</div>
+                                    <div>
+                                        <div class="text-sm font-medium">Amélie R.</div>
+                                        <div class="text-xs text-muted-foreground">Paris</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glass rounded-3xl p-8 shadow-glass">
+                                <div class="flex gap-1 mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-display text-xl leading-snug mb-6">&quot;<!-- -->The custom order process felt like couture. Every petal, every color, chosen with me.<!-- -->&quot;</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-accent grid place-items-center text-primary-foreground text-sm font-medium">S</div>
+                                    <div>
+                                        <div class="text-sm font-medium">Sofia L.</div>
+                                        <div class="text-xs text-muted-foreground">Milan</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="glass rounded-3xl p-8 shadow-glass">
+                                <div class="flex gap-1 mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-3 w-3 fill-accent text-accent" aria-hidden="true">
+                                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                    </svg>
+                                </div>
+                                <p class="text-display text-xl leading-snug mb-6">&quot;<!-- -->Received an Avunè coffret as a gift and immediately ordered three more. Timeless.<!-- -->&quot;</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-accent grid place-items-center text-primary-foreground text-sm font-medium">I</div>
+                                    <div>
+                                        <div class="text-sm font-medium">Isabelle M.</div>
+                                        <div class="text-xs text-muted-foreground">New York</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mx-auto max-w-6xl px-6 py-24">
+                    <div class="relative overflow-hidden rounded-[2.5rem] p-12 md:p-20 text-center bg-gradient-to-br from-primary/60 via-cream to-accent/30 shadow-soft">
+                        <div class="eyebrow mb-4">Bespoke</div>
+                        <h2 class="text-display text-4xl sm:text-6xl max-w-2xl mx-auto leading-[1.05]">
+                            Dream a bouquet.<br/>
+                            <em class="italic text-accent">We &#x27;ll make it real.</em>
+                        </h2>
+                        <p class="max-w-lg mx-auto mt-6 text-muted-foreground">Choose your colors, flowers, and story. Our atelier will craft it to your heart.</p>
+                        <div class="mt-8 flex justify-center gap-3">
+                            <a href="/custom" class="btn-primary">
+                                Start a custom order 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="relative mt-24 border-t border-border/60">
+                <div class="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-4">
+                    <div class="md:col-span-2 space-y-4">
+                        <div class="text-display text-3xl">
+                            Avun<span class="italic text-accent">è</span>
+                        </div>
+                        <p class="text-sm text-muted-foreground max-w-xs leading-relaxed">Handmade with love, crafted to last. Every bloom is shaped by hand in our atelier.</p>
+                        <div class="flex gap-3 pt-2">
+                            <a aria-label="Instagram" href="#" class="p-2.5 rounded-full glass hover:bg-primary/20 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram h-4 w-4" aria-hidden="true">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a aria-label="WhatsApp" href="#" class="p-2.5 rounded-full glass hover:bg-primary/20 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle h-4 w-4" aria-hidden="true">
+                                    <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+                                </svg>
+                            </a>
+                            <a aria-label="Pinterest" href="#" class="p-2.5 rounded-full glass hover:bg-primary/20 transition-colors">
+                                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12c0 5 3.1 9.3 7.5 11-.1-.9-.2-2.4 0-3.4.2-.9 1.4-5.6 1.4-5.6s-.4-.7-.4-1.8c0-1.7 1-2.9 2.2-2.9 1 0 1.5.8 1.5 1.7 0 1-.7 2.6-1 4-.3 1.2.6 2.1 1.7 2.1 2.1 0 3.6-2.2 3.6-5.3 0-2.8-2-4.7-4.9-4.7-3.3 0-5.3 2.5-5.3 5.1 0 1 .4 2.1.9 2.7.1.1.1.2.1.3-.1.4-.3 1.2-.3 1.4-.1.2-.2.3-.4.2-1.4-.7-2.3-2.7-2.3-4.4 0-3.6 2.6-6.9 7.5-6.9 3.9 0 7 2.8 7 6.5 0 3.9-2.5 7.1-5.9 7.1-1.1 0-2.2-.6-2.6-1.3l-.7 2.7c-.3 1-1 2.3-1.5 3.1.9.3 1.9.5 2.9.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="eyebrow mb-4">Boutique</div>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li>
+                                <a href="/products" class="hover:text-foreground">Bouquets</a>
+                            </li>
+                            <li>
+                                <a href="/products" class="hover:text-foreground">Single Flowers</a>
+                            </li>
+                            <li>
+                                <a href="/products" class="hover:text-foreground">Keychains</a>
+                            </li>
+                            <li>
+                                <a href="/products" class="hover:text-foreground">Gift Sets</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="eyebrow mb-4">Maison</div>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li>
+                                <a href="/about" class="hover:text-foreground">Our Story</a>
+                            </li>
+                            <li>
+                                <a href="/custom" class="hover:text-foreground">Custom Orders</a>
+                            </li>
+                            <li>
+                                <a href="/gallery" class="hover:text-foreground">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="hover:text-foreground">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-border/60">
+                    <div class="mx-auto max-w-7xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+                        <span>© <!-- -->2026<!-- --> Avunè. All rights reserved.</span>
+                        <span class="tracking-widest uppercase">Handmade · Édition Limitée</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+            (function(a, f) {
+                let l;
+                try {
+                    l = JSON.parse(sessionStorage.getItem(a) || "{}")
+                } catch {
+                    return
+                }
+                const n = l?.[f || history.state?.__TSR_key];
+                let c = !1;
+                for (const t in n) {
+                    const e = n[t]
+                      , o = e?.scrollX
+                      , s = e?.scrollY;
+                    if (Number.isFinite(o) && Number.isFinite(s)) {
+                        if (t === "window")
+                            scrollTo(o, s),
+                            c = !0;
+                        else if (t)
+                            try {
+                                const r = document.querySelector(t);
+                                r && (r.scrollLeft = o,
+                                r.scrollTop = s)
+                            } catch {}
+                    }
+                }
+                if (c)
+                    return;
+                const i = location.hash.slice(1);
+                if (i) {
+                    const t = history.state?.__hashScrollIntoViewOptions ?? !0;
+                    if (t) {
+                        const e = document.getElementById(i);
+                        e && e.scrollIntoView(t)
+                    }
+                    return
+                }
+                scrollTo(0, 0)
+            }
+            )("tsr-scroll-restoration-v1_3");
+            document.currentScript.remove()
+        </script>
+        <!--/$-->
+        <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section>
+        <script class="$tsr" id="$tsr-stream-barrier">
+            (self.$R = self.$R || {})["tsr"] = [];
+            self.$_TSR = {
+                h() {
+                    this.hydrated = !0,
+                    this.c()
+                },
+                e() {
+                    this.streamEnded = !0,
+                    this.c()
+                },
+                c() {
+                    this.hydrated && this.streamEnded && (delete self.$_TSR,
+                    delete self.$R.tsr)
+                },
+                p(e) {
+                    this.initialized ? e() : this.buffer.push(e)
+                },
+                buffer: []
+            };
+            $_TSR.router = ($R => $R[0] = {
+                manifest: $R[1] = {
+                    routes: $R[2] = {
+                        __root__: $R[3] = {
+                            preloads: $R[4] = ["/assets/index-Bf_yG1gX.js", "/assets/useStore-BIgwMX88.js", "/assets/cart-CQxn7ou7.js", "/assets/matchContext-Ba5k90rA.js", "/assets/root-DLTE-HSj.js"],
+                            scripts: $R[5] = [$R[6] = {
+                                attrs: $R[7] = {
+                                    type: "module",
+                                    async: !0,
+                                    src: "/assets/index-Bf_yG1gX.js"
+                                }
+                            }]
+                        },
+                        "/": $R[8] = {
+                            preloads: $R[9] = ["/assets/routes-Ca-ZspaQ.js", "/assets/Layout-BkI1xHW3.js", "/assets/sparkles-B2iTkPON.js", "/assets/hero-bouquet-D-ecqePd.js"]
+                        }
+                    }
+                },
+                matches: $R[10] = [$R[11] = {
+                    i: "__root__
